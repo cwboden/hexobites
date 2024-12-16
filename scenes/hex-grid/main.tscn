@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6vxdywusymfb"]
+
+[ext_resource type="Texture2D" uid="uid://bcf2b2fnlhyq" path="res://assets/textures/godot_icon.svg" id="1_3bcy3"]
+[ext_resource type="PackedScene" uid="uid://cu4qfdrq1lmun" path="res://scenes/_defaults/world_environment_2d.tscn" id="2_60b1e"]
+
+[sub_resource type="Environment" id="Environment_37anf"]
+background_mode = 3
+
+[node name="Root" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3bcy3")
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("2_60b1e")]
+environment = SubResource("Environment_37anf")
